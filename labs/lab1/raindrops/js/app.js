@@ -44,7 +44,7 @@ class Raindrop {
 
 var myRaindrop = [];
 
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 200; i++) {
   var cx = 0;
   var cy = 0;
   cx = 1 + Math.random() * 1500;
