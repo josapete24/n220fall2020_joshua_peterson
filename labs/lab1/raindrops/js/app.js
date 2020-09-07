@@ -33,6 +33,7 @@ class Raindrop {
     circle(this.x, this.y, this.radius, this.color);
 
     if (this.y >= 600) {
+      this.x = 1 + Math.random() * 1500;
       this.y = 0;
       this.speed = 10;
       b = b  + .05;
@@ -44,7 +45,7 @@ class Raindrop {
 
 var myRaindrop = [];
 
-for (var i = 0; i < 200; i++) {
+for (var i = 0; i < 150; i++) {
   var cx = 0;
   var cy = 0;
   cx = 1 + Math.random() * 1500;
