@@ -1,4 +1,4 @@
-
+//Book One
 let book1 = new Vue({
     el: "#book1",
     data: {
@@ -10,6 +10,7 @@ let book1 = new Vue({
     },
 });
 
+//Book 2
 let book2 = new Vue({
     el: "#book2",
     data: {
@@ -19,12 +20,16 @@ let book2 = new Vue({
             {title:"World of Warcraft: Arthas Rise of the Lich King" , emoji:"📘" , author:"Christie Golden" }  
          ]
     },
+
+    //Function within the button to show and hide the second book based on its ready state
     methods: {
         bookTwo: function() {
             if (this.ready == false){
                 this.ready = true;
+                console.log(this.ready);
             } else if(this.ready == true) {
                 this.ready = false;
+                console.log(this.ready);
             }
         }
     }
