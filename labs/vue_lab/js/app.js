@@ -1,22 +1,31 @@
-Vue.component("book-view" , {
-    props: ["book"],
-    template: "<li>{{ book.title }} {{ book.emoji }} <br /> {{ book.author }} </li>"
-})
 
-let app = new Vue({
-    el: "#app",
+let book1 = new Vue({
+    el: "#book1",
     data: {
-         message: "Books" ,
+         message: "Book1" ,
          ready: true,
-         books: [ 
-            { id: 1 , title:"The Legend of Zelda: Majora's Mask" , emoji:"📖" , author:"Akira Himekawa" } , 
-            { id: 2 , title:"World of Warcraft: Arthas Rise of the Lich King" ,  emoji:"📘" , author:"Christie Golden"}
-            ] 
+         books: [
+            {title:"The Legend of Zelda: Majora's Mask" , emoji:"📖" , author:"Akira Himekawa" }  
+         ]
+    },
+});
+
+let book2 = new Vue({
+    el: "#book2",
+    data: {
+         message: "Book2" ,
+         ready: false,
+         books: [
+            {title:"World of Warcraft: Arthas Rise of the Lich King" , emoji:"📘" , author:"Christie Golden" }  
+         ]
     },
     methods: {
         bookTwo: function() {
-            
+            if (this.ready == false){
+                this.ready = true;
+            } else if(this.ready == true) {
+                this.ready = false;
+            }
         }
     }
 });
-
