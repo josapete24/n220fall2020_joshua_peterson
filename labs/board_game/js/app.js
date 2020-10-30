@@ -57,6 +57,7 @@ board.addEventListener("mousemove" , setMouseCord);
 // Setting the x position of the piece equal to the x position of the mouse //
 function setMouseCord(event){
     
+    // Moving the piece by 100 left to right //
     if (event.clientX < 200) {
         mouseX = 50;
     } else if (event.clientX > 200 && event.clientX < 300) {
@@ -72,10 +73,10 @@ function setMouseCord(event){
     }else if (event.clientX > 700 && event.clientX < 800) {
         mouseX = 650;
     }
-    //mouseX = event.clientX - 110;
 
-    console.log(mouseX)
+    //console.log(mouseX)
 
+    // The piece will only move left or right if its at the top
     if (piece1.style.cy <= 25) {
         piece1.style.cx = mouseX;
     }else if(piece22.style.cy <= 25) {
@@ -170,23 +171,878 @@ board.addEventListener("click" , dropPiece);
 // Dropping the Piece //
 function dropPiece() {
     
+    // Check piece 14 for collision //
+    if (piece34.style.cy > 25) {
+        if (piece14.style.cx == piece24.style.cx) {
+            piece14.style.cx = piece24.style.cx - 100;
+        } else if (piece14.style.cx == piece13.style.cx) {
+            piece14.style.cy = piece13.style.cy - 100;
+        } else if (piece14.style.cx == piece12.style.cx) {
+            piece14.style.cy = piece12.style.cy - 100;
+        } else if (piece14.style.cx == piece32.style.cx) {
+            piece14.style.cy = piece32.style.cy - 100;
+        } else if (piece14.style.cx == piece11.style.cx) {
+            piece14.style.cy = piece11.style.cy - 100;
+        } else if (piece14.style.cx == piece31.style.cx) {
+            piece14.style.cy = piece31.style.cy - 100;
+        } else if (piece14.style.cx == piece10.style.cx) {
+            piece14.style.cy = piece10.style.cy - 100
+        } else if (piece14.style.cx == piece30.style.cx) {
+            piece14.style.cy = piece30.style.cy - 100;
+        } else if (piece14.style.cx == piece9.style.cx) {
+            piece14.style.cy = piece9.style.cy - 100;
+        } else if (piece14.style.cx == piece29.style.cx) {
+            piece14.style.cy = piece29.style.cy - 100;
+        } else if (piece14.style.cx == piece8.style.cx) {
+            piece14.style.cy = piece8.style.cy - 100;
+        } else if (piece14.style.cx == piece28.style.cx) {
+            piece14.style.cy = piece28.style.cy - 100;
+        } else if (piece14.style.cx == piece7.style.cx) {
+            piece14.style.cy = piece7.style.cy - 100;
+        } else if (piece14.style.cx == piece27.style.cx) {
+            piece14.style.cy = piece27.style.cy - 100;
+        } else if (piece14.style.cx == piece6.style.cx) {
+            piece14.style.cy = piece6.style.cy - 100
+        } else if (piece14.style.cx == piece26.style.cx) {
+            piece14.style.cy = piece26.style.cy - 100;
+        } else if (piece14.style.cx == piece5.style.cx) {
+            piece14.style.cy = piece5.style.cy - 100;
+        } else if (piece14.style.cx == piece25.style.cx) {
+            piece14.style.cy = piece25.style.cy - 100;
+        } else if (piece14.style.cx == piece4.style.cx) {
+            piece14.style.cy = piece4.style.cy - 100;
+        } else if (piece14.style.cx == piece24.style.cx) {
+            piece14.style.cy = piece24.style.cy - 100;
+        } else if (piece14.style.cx == piece3.style.cx) {
+            piece14.style.cy = piece3.style.cy - 100;
+        } else if (piece14.style.cx == piece23.style.cx) {
+            piece14.style.cy = piece23.style.cy - 100;
+        } else if (piece14.style.cx == piece2.style.cx) {
+            piece14.style.cy = piece2.style.cy - 100;
+        } else if (piece14.style.cx == piece22.style.cx) {
+            piece14.style.cy = piece22.style.cy - 100;
+        } else if (piece14.style.cx == piece1.style.cx) {
+            piece14.style.cy = piece1.style.cy - 100;
+        } else {
+            piece14.style.cy = 550;
+        }
+    }
+
+    // Check piece 34 for collision //
+    if (piece13.style.cy > 25) {
+        if (piece34.style.cx == piece13.style.cx) {
+            piece34.style.cy = piece13.style.cy - 100;
+        } else if (piece34.style.cx == piece12.style.cx) {
+            piece34.style.cy = piece12.style.cy - 100;
+        } else if (piece34.style.cx == piece32.style.cx) {
+            piece34.style.cy = piece32.style.cy - 100;
+        } else if (piece34.style.cx == piece11.style.cx) {
+            piece34.style.cy = piece11.style.cy - 100;
+        } else if (piece34.style.cx == piece31.style.cx) {
+            piece34.style.cy = piece31.style.cy - 100;
+        } else if (piece34.style.cx == piece10.style.cx) {
+            piece34.style.cy = piece10.style.cy - 100
+        } else if (piece34.style.cx == piece30.style.cx) {
+            piece34.style.cy = piece30.style.cy - 100;
+        } else if (piece34.style.cx == piece9.style.cx) {
+            piece34.style.cy = piece9.style.cy - 100;
+        } else if (piece34.style.cx == piece29.style.cx) {
+            piece34.style.cy = piece29.style.cy - 100;
+        } else if (piece34.style.cx == piece8.style.cx) {
+            piece34.style.cy = piece8.style.cy - 100;
+        } else if (piece34.style.cx == piece28.style.cx) {
+            piece34.style.cy = piece28.style.cy - 100;
+        } else if (piece34.style.cx == piece7.style.cx) {
+            piece34.style.cy = piece7.style.cy - 100;
+        } else if (piece34.style.cx == piece27.style.cx) {
+            piece34.style.cy = piece27.style.cy - 100;
+        } else if (piece34.style.cx == piece6.style.cx) {
+            piece34.style.cy = piece6.style.cy - 100
+        } else if (piece34.style.cx == piece26.style.cx) {
+            piece34.style.cy = piece26.style.cy - 100;
+        } else if (piece34.style.cx == piece5.style.cx) {
+            piece34.style.cy = piece5.style.cy - 100;
+        } else if (piece34.style.cx == piece25.style.cx) {
+            piece34.style.cy = piece25.style.cy - 100;
+        } else if (piece34.style.cx == piece4.style.cx) {
+            piece34.style.cy = piece4.style.cy - 100;
+        } else if (piece34.style.cx == piece24.style.cx) {
+            piece34.style.cy = piece24.style.cy - 100;
+        } else if (piece34.style.cx == piece3.style.cx) {
+            piece34.style.cy = piece3.style.cy - 100;
+        } else if (piece34.style.cx == piece23.style.cx) {
+            piece34.style.cy = piece23.style.cy - 100;
+        } else if (piece34.style.cx == piece2.style.cx) {
+            piece34.style.cy = piece2.style.cy - 100;
+        } else if (piece34.style.cx == piece22.style.cx) {
+            piece34.style.cy = piece22.style.cy - 100;
+        } else if (piece34.style.cx == piece1.style.cx) {
+            piece34.style.cy = piece1.style.cy - 100;
+        } else {
+            piece34.style.cy = 550;
+        }
+    }
+
+    // Check piece 13 for collision //
+    if (piece33.style.cy > 25) {
+        if (piece13.style.cx == piece13.style.cx) {
+            piece33.style.cy = piece13.style.cy - 100;
+        } else if (piece13.style.cx == piece12.style.cx) {
+            piece13.style.cy = piece12.style.cy - 100;
+        } else if (piece13.style.cx == piece32.style.cx) {
+            piece13.style.cy = piece32.style.cy - 100;
+        } else if (piece13.style.cx == piece11.style.cx) {
+            piece13.style.cy = piece11.style.cy - 100;
+        } else if (piece13.style.cx == piece31.style.cx) {
+            piece13.style.cy = piece31.style.cy - 100;
+        } else if (piece13.style.cx == piece10.style.cx) {
+            piece13.style.cy = piece10.style.cy - 100
+        } else if (piece13.style.cx == piece30.style.cx) {
+            piece13.style.cy = piece30.style.cy - 100;
+        } else if (piece13.style.cx == piece9.style.cx) {
+            piece13.style.cy = piece9.style.cy - 100;
+        } else if (piece13.style.cx == piece29.style.cx) {
+            piece13.style.cy = piece29.style.cy - 100;
+        } else if (piece13.style.cx == piece8.style.cx) {
+            piece13.style.cy = piece8.style.cy - 100;
+        } else if (piece13.style.cx == piece28.style.cx) {
+            piece13.style.cy = piece28.style.cy - 100;
+        } else if (piece13.style.cx == piece7.style.cx) {
+            piece13.style.cy = piece7.style.cy - 100;
+        } else if (piece13.style.cx == piece27.style.cx) {
+            piece13.style.cy = piece27.style.cy - 100;
+        } else if (piece13.style.cx == piece6.style.cx) {
+            piece13.style.cy = piece6.style.cy - 100
+        } else if (piece13.style.cx == piece26.style.cx) {
+            piece13.style.cy = piece26.style.cy - 100;
+        } else if (piece13.style.cx == piece5.style.cx) {
+            piece13.style.cy = piece5.style.cy - 100;
+        } else if (piece13.style.cx == piece25.style.cx) {
+            piece13.style.cy = piece25.style.cy - 100;
+        } else if (piece13.style.cx == piece4.style.cx) {
+            piece13.style.cy = piece4.style.cy - 100;
+        } else if (piece13.style.cx == piece24.style.cx) {
+            piece13.style.cy = piece24.style.cy - 100;
+        } else if (piece13.style.cx == piece3.style.cx) {
+            piece13.style.cy = piece3.style.cy - 100;
+        } else if (piece13.style.cx == piece23.style.cx) {
+            piece13.style.cy = piece23.style.cy - 100;
+        } else if (piece13.style.cx == piece2.style.cx) {
+            piece13.style.cy = piece2.style.cy - 100;
+        } else if (piece13.style.cx == piece22.style.cx) {
+            piece13.style.cy = piece22.style.cy - 100;
+        } else if (piece13.style.cx == piece1.style.cx) {
+            piece13.style.cy = piece1.style.cy - 100;
+        } else {
+            piece13.style.cy = 550;
+        }
+    }
+
+    // Check piece 33 for collision //
+    if (piece12.style.cy > 25) {
+        if (piece33.style.cx == piece12.style.cx) {
+            piece33.style.cy = piece12.style.cy - 100;
+        } else if (piece33.style.cx == piece32.style.cx) {
+            piece33.style.cy = piece32.style.cy - 100;
+        } else if (piece33.style.cx == piece11.style.cx) {
+            piece33.style.cy = piece11.style.cy - 100;
+        } else if (piece33.style.cx == piece31.style.cx) {
+            piece33.style.cy = piece31.style.cy - 100;
+        } else if (piece33.style.cx == piece10.style.cx) {
+            piece33.style.cy = piece10.style.cy - 100
+        } else if (piece33.style.cx == piece30.style.cx) {
+            piece33.style.cy = piece30.style.cy - 100;
+        } else if (piece33.style.cx == piece9.style.cx) {
+            piece33.style.cy = piece9.style.cy - 100;
+        } else if (piece33.style.cx == piece29.style.cx) {
+            piece33.style.cy = piece29.style.cy - 100;
+        } else if (piece33.style.cx == piece8.style.cx) {
+            piece33.style.cy = piece8.style.cy - 100;
+        } else if (piece33.style.cx == piece28.style.cx) {
+            piece33.style.cy = piece28.style.cy - 100;
+        } else if (piece33.style.cx == piece7.style.cx) {
+            piece33.style.cy = piece7.style.cy - 100;
+        } else if (piece33.style.cx == piece27.style.cx) {
+            piece33.style.cy = piece27.style.cy - 100;
+        } else if (piece33.style.cx == piece6.style.cx) {
+            piece33.style.cy = piece6.style.cy - 100
+        } else if (piece33.style.cx == piece26.style.cx) {
+            piece33.style.cy = piece26.style.cy - 100;
+        } else if (piece33.style.cx == piece5.style.cx) {
+            piece33.style.cy = piece5.style.cy - 100;
+        } else if (piece33.style.cx == piece25.style.cx) {
+            piece33.style.cy = piece25.style.cy - 100;
+        } else if (piece33.style.cx == piece4.style.cx) {
+            piece33.style.cy = piece4.style.cy - 100;
+        } else if (piece33.style.cx == piece24.style.cx) {
+            piece33.style.cy = piece24.style.cy - 100;
+        } else if (piece33.style.cx == piece3.style.cx) {
+            piece33.style.cy = piece3.style.cy - 100;
+        } else if (piece33.style.cx == piece23.style.cx) {
+            piece33.style.cy = piece23.style.cy - 100;
+        } else if (piece33.style.cx == piece2.style.cx) {
+            piece33.style.cy = piece2.style.cy - 100;
+        } else if (piece33.style.cx == piece22.style.cx) {
+            piece33.style.cy = piece22.style.cy - 100;
+        } else if (piece33.style.cx == piece1.style.cx) {
+            piece33.style.cy = piece1.style.cy - 100;
+        } else {
+            piece33.style.cy = 550;
+        }
+    }
+
+    // Check piece 12 for collision //
+    if (piece32.style.cy > 25) {
+        if (piece12.style.cx == piece32.style.cx) {
+            piece12.style.cy = piece32.style.cy - 100;
+        } else if (piece12.style.cx == piece11.style.cx) {
+            piece12.style.cy = piece11.style.cy - 100;
+        } else if (piece12.style.cx == piece31.style.cx) {
+            piece12.style.cy = piece31.style.cy - 100;
+        } else if (piece12.style.cx == piece10.style.cx) {
+            piece12.style.cy = piece10.style.cy - 100
+        } else if (piece12.style.cx == piece30.style.cx) {
+            piece12.style.cy = piece30.style.cy - 100;
+        } else if (piece12.style.cx == piece9.style.cx) {
+            piece12.style.cy = piece9.style.cy - 100;
+        } else if (piece12.style.cx == piece29.style.cx) {
+            piece12.style.cy = piece29.style.cy - 100;
+        } else if (piece12.style.cx == piece8.style.cx) {
+            piece12.style.cy = piece8.style.cy - 100;
+        } else if (piece12.style.cx == piece28.style.cx) {
+            piece12.style.cy = piece28.style.cy - 100;
+        } else if (piece12.style.cx == piece7.style.cx) {
+            piece12.style.cy = piece7.style.cy - 100;
+        } else if (piece12.style.cx == piece27.style.cx) {
+            piece12.style.cy = piece27.style.cy - 100;
+        } else if (piece12.style.cx == piece6.style.cx) {
+            piece12.style.cy = piece6.style.cy - 100
+        } else if (piece12.style.cx == piece26.style.cx) {
+            piece12.style.cy = piece26.style.cy - 100;
+        } else if (piece12.style.cx == piece5.style.cx) {
+            piece12.style.cy = piece5.style.cy - 100;
+        } else if (piece12.style.cx == piece25.style.cx) {
+            piece12.style.cy = piece25.style.cy - 100;
+        } else if (piece12.style.cx == piece4.style.cx) {
+            piece12.style.cy = piece4.style.cy - 100;
+        } else if (piece12.style.cx == piece24.style.cx) {
+            piece12.style.cy = piece24.style.cy - 100;
+        } else if (piece12.style.cx == piece3.style.cx) {
+            piece12.style.cy = piece3.style.cy - 100;
+        } else if (piece12.style.cx == piece23.style.cx) {
+            piece12.style.cy = piece23.style.cy - 100;
+        } else if (piece12.style.cx == piece2.style.cx) {
+            piece12.style.cy = piece2.style.cy - 100;
+        } else if (piece12.style.cx == piece22.style.cx) {
+            piece12.style.cy = piece22.style.cy - 100;
+        } else if (piece12.style.cx == piece1.style.cx) {
+            piece12.style.cy = piece1.style.cy - 100;
+        } else {
+            piece12.style.cy = 550;
+        }
+    }
+
+    // Check piece 22 for collision //
+    if (piece11.style.cy > 25) {
+        if (piece32.style.cx == piece11.style.cx) {
+            piece32.style.cy = piece11.style.cy - 100;
+        } else if (piece32.style.cx == piece31.style.cx) {
+            piece32.style.cy = piece31.style.cy - 100;
+        } else if (piece32.style.cx == piece10.style.cx) {
+            piece32.style.cy = piece10.style.cy - 100
+        } else if (piece32.style.cx == piece30.style.cx) {
+            piece32.style.cy = piece30.style.cy - 100;
+        } else if (piece32.style.cx == piece9.style.cx) {
+            piece32.style.cy = piece9.style.cy - 100;
+        } else if (piece32.style.cx == piece29.style.cx) {
+            piece32.style.cy = piece29.style.cy - 100;
+        } else if (piece32.style.cx == piece8.style.cx) {
+            piece32.style.cy = piece8.style.cy - 100;
+        } else if (piece32.style.cx == piece28.style.cx) {
+            piece32.style.cy = piece28.style.cy - 100;
+        } else if (piece32.style.cx == piece7.style.cx) {
+            piece32.style.cy = piece7.style.cy - 100;
+        } else if (piece32.style.cx == piece27.style.cx) {
+            piece32.style.cy = piece27.style.cy - 100;
+        } else if (piece32.style.cx == piece6.style.cx) {
+            piece32.style.cy = piece6.style.cy - 100
+        } else if (piece32.style.cx == piece26.style.cx) {
+            piece32.style.cy = piece26.style.cy - 100;
+        } else if (piece32.style.cx == piece5.style.cx) {
+            piece32.style.cy = piece5.style.cy - 100;
+        } else if (piece32.style.cx == piece25.style.cx) {
+            piece32.style.cy = piece25.style.cy - 100;
+        } else if (piece32.style.cx == piece4.style.cx) {
+            piece32.style.cy = piece4.style.cy - 100;
+        } else if (piece32.style.cx == piece24.style.cx) {
+            piece32.style.cy = piece24.style.cy - 100;
+        } else if (piece32.style.cx == piece3.style.cx) {
+            piece32.style.cy = piece3.style.cy - 100;
+        } else if (piece32.style.cx == piece23.style.cx) {
+            piece32.style.cy = piece23.style.cy - 100;
+        } else if (piece32.style.cx == piece2.style.cx) {
+            piece32.style.cy = piece2.style.cy - 100;
+        } else if (piece32.style.cx == piece22.style.cx) {
+            piece32.style.cy = piece22.style.cy - 100;
+        } else if (piece32.style.cx == piece1.style.cx) {
+            piece32.style.cy = piece1.style.cy - 100;
+        } else {
+            piece32.style.cy = 550;
+        }
+    }
+
+    // Check piece 11 for collision //
+    if (piece31.style.cy > 25) {
+        if (piece11.style.cx == piece31.style.cx) {
+            piece11.style.cy = piece31.style.cy - 100;
+        } else if (piece11.style.cx == piece10.style.cx) {
+            piece11.style.cy = piece10.style.cy - 100
+        } else if (piece11.style.cx == piece30.style.cx) {
+            piece11.style.cy = piece30.style.cy - 100;
+        } else if (piece11.style.cx == piece9.style.cx) {
+            piece11.style.cy = piece9.style.cy - 100;
+        } else if (piece11.style.cx == piece29.style.cx) {
+            piece11.style.cy = piece29.style.cy - 100;
+        } else if (piece11.style.cx == piece8.style.cx) {
+            piece11.style.cy = piece8.style.cy - 100;
+        } else if (piece11.style.cx == piece28.style.cx) {
+            piece11.style.cy = piece28.style.cy - 100;
+        } else if (piece11.style.cx == piece7.style.cx) {
+            piece11.style.cy = piece7.style.cy - 100;
+        } else if (piece11.style.cx == piece27.style.cx) {
+            piece11.style.cy = piece27.style.cy - 100;
+        } else if (piece11.style.cx == piece6.style.cx) {
+            piece11.style.cy = piece6.style.cy - 100
+        } else if (piece11.style.cx == piece26.style.cx) {
+            piece11.style.cy = piece26.style.cy - 100;
+        } else if (piece11.style.cx == piece5.style.cx) {
+            piece11.style.cy = piece5.style.cy - 100;
+        } else if (piece11.style.cx == piece25.style.cx) {
+            piece11.style.cy = piece25.style.cy - 100;
+        } else if (piece11.style.cx == piece4.style.cx) {
+            piece11.style.cy = piece4.style.cy - 100;
+        } else if (piece11.style.cx == piece24.style.cx) {
+            piece11.style.cy = piece24.style.cy - 100;
+        } else if (piece11.style.cx == piece3.style.cx) {
+            piece11.style.cy = piece3.style.cy - 100;
+        } else if (piece11.style.cx == piece23.style.cx) {
+            piece11.style.cy = piece23.style.cy - 100;
+        } else if (piece11.style.cx == piece2.style.cx) {
+            piece11.style.cy = piece2.style.cy - 100;
+        } else if (piece11.style.cx == piece22.style.cx) {
+            piece11.style.cy = piece22.style.cy - 100;
+        } else if (piece11.style.cx == piece1.style.cx) {
+            piece11.style.cy = piece1.style.cy - 100;
+        } else {
+            piece11.style.cy = 550;
+        }
+    }
+
+    // Check piece 31 for collision //
+    if (piece10.style.cy > 25) {
+        if (piece31.style.cx == piece10.style.cx) {
+            piece31.style.cy = piece10.style.cy - 100
+        } else if (piece31.style.cx == piece30.style.cx) {
+            piece31.style.cy = piece30.style.cy - 100;
+        } else if (piece31.style.cx == piece9.style.cx) {
+            piece31.style.cy = piece9.style.cy - 100;
+        } else if (piece31.style.cx == piece29.style.cx) {
+            piece31.style.cy = piece29.style.cy - 100;
+        } else if (piece31.style.cx == piece8.style.cx) {
+            piece31.style.cy = piece8.style.cy - 100;
+        } else if (piece31.style.cx == piece28.style.cx) {
+            piece31.style.cy = piece28.style.cy - 100;
+        } else if (piece31.style.cx == piece7.style.cx) {
+            piece31.style.cy = piece7.style.cy - 100;
+        } else if (piece31.style.cx == piece27.style.cx) {
+            piece31.style.cy = piece27.style.cy - 100;
+        } else if (piece31.style.cx == piece6.style.cx) {
+            piece31.style.cy = piece6.style.cy - 100
+        } else if (piece31.style.cx == piece26.style.cx) {
+            piece31.style.cy = piece26.style.cy - 100;
+        } else if (piece31.style.cx == piece5.style.cx) {
+            piece31.style.cy = piece5.style.cy - 100;
+        } else if (piece31.style.cx == piece25.style.cx) {
+            piece31.style.cy = piece25.style.cy - 100;
+        } else if (piece31.style.cx == piece4.style.cx) {
+            piece31.style.cy = piece4.style.cy - 100;
+        } else if (piece31.style.cx == piece24.style.cx) {
+            piece31.style.cy = piece24.style.cy - 100;
+        } else if (piece31.style.cx == piece3.style.cx) {
+            piece31.style.cy = piece3.style.cy - 100;
+        } else if (piece31.style.cx == piece23.style.cx) {
+            piece31.style.cy = piece23.style.cy - 100;
+        } else if (piece31.style.cx == piece2.style.cx) {
+            piece31.style.cy = piece2.style.cy - 100;
+        } else if (piece31.style.cx == piece22.style.cx) {
+            piece31.style.cy = piece22.style.cy - 100;
+        } else if (piece31.style.cx == piece1.style.cx) {
+            piece31.style.cy = piece1.style.cy - 100;
+        } else {
+            piece31.style.cy = 550;
+        }
+    }
+
+    // Check piece 10 for collision //
+    if (piece30.style.cy > 25) {
+        if (piece10.style.cx == piece30.style.cx) {
+            piece10.style.cy = piece30.style.cy- 100;
+        } else if (piece10.style.cx == piece9.style.cx) {
+            piece10.style.cy = piece9.style.cy - 100;
+        } else if (piece10.style.cx == piece29.style.cx) {
+            piece10.style.cy = piece29.style.cy - 100;
+        } else if (piece10.style.cx == piece8.style.cx) {
+            piece10.style.cy = piece8.style.cy - 100;
+        } else if (piece10.style.cx == piece28.style.cx) {
+            piece10.style.cy = piece28.style.cy - 100;
+        } else if (piece10.style.cx == piece7.style.cx) {
+            piece10.style.cy = piece7.style.cy - 100;
+        } else if (piece10.style.cx == piece27.style.cx) {
+            piece10.style.cy = piece27.style.cy - 100;
+        } else if (piece10.style.cx == piece6.style.cx) {
+            piece10.style.cy = piece6.style.cy - 100
+        } else if (piece10.style.cx == piece26.style.cx) {
+            piece10.style.cy = piece26.style.cy - 100;
+        } else if (piece10.style.cx == piece5.style.cx) {
+            piece10.style.cy = piece5.style.cy - 100;
+        } else if (piece10.style.cx == piece25.style.cx) {
+            piece10.style.cy = piece25.style.cy - 100;
+        } else if (piece10.style.cx == piece4.style.cx) {
+            piece10.style.cy = piece4.style.cy - 100;
+        } else if (piece10.style.cx == piece24.style.cx) {
+            piece10.style.cy = piece24.style.cy - 100;
+        } else if (piece10.style.cx == piece3.style.cx) {
+            piece10.style.cy = piece3.style.cy - 100;
+        } else if (piece10.style.cx == piece23.style.cx) {
+            piece10.style.cy = piece23.style.cy - 100;
+        } else if (piece10.style.cx == piece2.style.cx) {
+            piece10.style.cy = piece2.style.cy - 100;
+        } else if (piece10.style.cx == piece22.style.cx) {
+            piece10.style.cy = piece22.style.cy - 100;
+        } else if (piece10.style.cx == piece1.style.cx) {
+            piece10.style.cy = piece1.style.cy - 100;
+        } else {
+            piece10.style.cy = 550;
+        }
+    }
+
+    // Check piece 30 for collision //
+    if (piece9.style.cy > 25) {
+        if (piece30.style.cx == piece9.style.cx) {
+            piece30.style.cy = piece9.style.cy - 100;
+        } else if (piece30.style.cx == piece29.style.cx) {
+            piece30.style.cy = piece29.style.cy - 100;
+        } else if (piece30.style.cx == piece8.style.cx) {
+            piece30.style.cy = piece8.style.cy - 100;
+        } else if (piece30.style.cx == piece28.style.cx) {
+            piece30.style.cy = piece28.style.cy - 100;
+        } else if (piece30.style.cx == piece7.style.cx) {
+            piece30.style.cy = piece7.style.cy - 100;
+        } else if (piece30.style.cx == piece27.style.cx) {
+            piece30.style.cy = piece27.style.cy - 100;
+        } else if (piece30.style.cx == piece6.style.cx) {
+            piece30.style.cy = piece6.style.cy - 100
+        } else if (piece30.style.cx == piece26.style.cx) {
+            piece30.style.cy = piece26.style.cy - 100;
+        } else if (piece30.style.cx == piece5.style.cx) {
+            piece30.style.cy = piece5.style.cy - 100;
+        } else if (piece30.style.cx == piece25.style.cx) {
+            piece30.style.cy = piece25.style.cy - 100;
+        } else if (piece30.style.cx == piece4.style.cx) {
+            piece30.style.cy = piece4.style.cy - 100;
+        } else if (piece30.style.cx == piece24.style.cx) {
+            piece30.style.cy = piece24.style.cy - 100;
+        } else if (piece30.style.cx == piece3.style.cx) {
+            piece30.style.cy = piece3.style.cy - 100;
+        } else if (piece30.style.cx == piece23.style.cx) {
+            piece30.style.cy = piece23.style.cy - 100;
+        } else if (piece30.style.cx == piece2.style.cx) {
+            piece30.style.cy = piece2.style.cy - 100;
+        } else if (piece30.style.cx == piece22.style.cx) {
+            piece30.style.cy = piece22.style.cy - 100;
+        } else if (piece30.style.cx == piece1.style.cx) {
+            piece30.style.cy = piece1.style.cy - 100;
+        } else {
+            piece30.style.cy = 550;
+        }
+    }
+
+    // Check piece 9 for collision //
+    if (piece29.style.cy > 25) {
+        if (piece9.style.cx == piece29.style.cx) {
+            piece9.style.cy = piece29.style.cy - 100;
+        } else if (piece9.style.cx == piece8.style.cx) {
+            piece9.style.cy = piece8.style.cy - 100;
+        } else if (piece9.style.cx == piece28.style.cx) {
+            piece9.style.cy = piece28.style.cy - 100;
+        } else if (piece9.style.cx == piece7.style.cx) {
+            piece9.style.cy = piece7.style.cy - 100;
+        } else if (piece9.style.cx == piece27.style.cx) {
+            piece9.style.cy = piece27.style.cy - 100;
+        } else if (piece9.style.cx == piece6.style.cx) {
+            piece9.style.cy = piece6.style.cy - 100
+        } else if (piece9.style.cx == piece26.style.cx) {
+            piece9.style.cy = piece26.style.cy - 100;
+        } else if (piece9.style.cx == piece5.style.cx) {
+            piece9.style.cy = piece5.style.cy - 100;
+        } else if (piece9.style.cx == piece25.style.cx) {
+            piece9.style.cy = piece25.style.cy - 100;
+        } else if (piece9.style.cx == piece4.style.cx) {
+            piece9.style.cy = piece4.style.cy - 100;
+        } else if (piece9.style.cx == piece24.style.cx) {
+            piece9.style.cy = piece24.style.cy - 100;
+        } else if (piece9.style.cx == piece3.style.cx) {
+            piece9.style.cy = piece3.style.cy - 100;
+        } else if (piece9.style.cx == piece23.style.cx) {
+            piece9.style.cy = piece23.style.cy - 100;
+        } else if (piece9.style.cx == piece2.style.cx) {
+            piece9.style.cy = piece2.style.cy - 100;
+        } else if (piece9.style.cx == piece22.style.cx) {
+            piece9.style.cy = piece22.style.cy - 100;
+        } else if (piece9.style.cx == piece1.style.cx) {
+            piece9.style.cy = piece1.style.cy - 100;
+        } else {
+            piece9.style.cy = 550;
+        }
+    }
+
+    // Check piece 29 for collision //
+    if (piece8.style.cy > 25) {
+        if (piece29.style.cx == piece8.style.cx) {
+            piece29.style.cy = piece8.style.cy - 100;
+        } else if (piece29.style.cx == piece28.style.cx) {
+            piece29.style.cy = piece28.style.cy - 100;
+        } else if (piece29.style.cx == piece7.style.cx) {
+            piece29.style.cy = piece7.style.cy - 100;
+        } else if (piece29.style.cx == piece27.style.cx) {
+            piece29.style.cy = piece27.style.cy - 100;
+        } else if (piece29.style.cx == piece6.style.cx) {
+            piece29.style.cy = piece6.style.cy - 100
+        } else if (piece29.style.cx == piece26.style.cx) {
+            piece29.style.cy = piece26.style.cy - 100;
+        } else if (piece29.style.cx == piece5.style.cx) {
+            piece29.style.cy = piece5.style.cy - 100;
+        } else if (piece29.style.cx == piece25.style.cx) {
+            piece29.style.cy = piece25.style.cy - 100;
+        } else if (piece29.style.cx == piece4.style.cx) {
+            piece29.style.cy = piece4.style.cy - 100;
+        } else if (piece29.style.cx == piece24.style.cx) {
+            piece29.style.cy = piece24.style.cy - 100;
+        } else if (piece29.style.cx == piece3.style.cx) {
+            piece29.style.cy = piece3.style.cy - 100;
+        } else if (piece29.style.cx == piece23.style.cx) {
+            piece29.style.cy = piece23.style.cy - 100;
+        } else if (piece29.style.cx == piece2.style.cx) {
+            piece29.style.cy = piece2.style.cy - 100;
+        } else if (piece29.style.cx == piece22.style.cx) {
+            piece29.style.cy = piece22.style.cy - 100;
+        } else if (piece29.style.cx == piece1.style.cx) {
+            piece29.style.cy = piece1.style.cy - 100;
+        } else {
+            piece29.style.cy = 550;
+        }
+    }
+
+    // Check piece 8 for collision //
+    if (piece28.style.cy > 25) {
+        if (piece8.style.cx == piece28.style.cx) {
+            piece8.style.cy = piece28.style.cy - 100;
+        } else if (piece8.style.cx == piece7.style.cx) {
+            piece8.style.cy = piece7.style.cy - 100;
+        } else if (piece8.style.cx == piece27.style.cx) {
+            piece8.style.cy = piece27.style.cy - 100;
+        } else if (piece8.style.cx == piece6.style.cx) {
+            piece8.style.cy = piece6.style.cy - 100
+        } else if (piece8.style.cx == piece26.style.cx) {
+            piece8.style.cy = piece26.style.cy - 100;
+        } else if (piece8.style.cx == piece5.style.cx) {
+            piece8.style.cy = piece5.style.cy - 100;
+        } else if (piece8.style.cx == piece25.style.cx) {
+            piece8.style.cy = piece25.style.cy - 100;
+        } else if (piece8.style.cx == piece4.style.cx) {
+            piece8.style.cy = piece4.style.cy - 100;
+        } else if (piece8.style.cx == piece24.style.cx) {
+            piece8.style.cy = piece24.style.cy - 100;
+        } else if (piece8.style.cx == piece3.style.cx) {
+            piece8.style.cy = piece3.style.cy - 100;
+        } else if (piece8.style.cx == piece23.style.cx) {
+            piece8.style.cy = piece23.style.cy - 100;
+        } else if (piece8.style.cx == piece2.style.cx) {
+            piece8.style.cy = piece2.style.cy - 100;
+        } else if (piece8.style.cx == piece22.style.cx) {
+            piece8.style.cy = piece22.style.cy - 100;
+        } else if (piece8.style.cx == piece1.style.cx) {
+            piece8.style.cy = piece1.style.cy - 100;
+        } else {
+            piece8.style.cy = 550;
+        }
+    }
+
+    // Piece 28 Checking for Collision
+    if (piece7.style.cy > 25) {
+        if (piece28.style.cx == piece7.style.cx) {
+            piece28.style.cy = piece7.style.cy - 100;
+        } else if (piece28.style.cx == piece27.style.cx) {
+            piece28.style.cy = piece27.style.cy - 100;
+        } else if (piece28.style.cx == piece6.style.cx) {
+            piece28.style.cy = piece6.style.cy - 100
+        } else if (piece28.style.cx == piece26.style.cx) {
+            piece28.style.cy = piece26.style.cy - 100;
+        } else if (piece28.style.cx == piece5.style.cx) {
+            piece28.style.cy = piece5.style.cy - 100;
+        } else if (piece28.style.cx == piece25.style.cx) {
+            piece28.style.cy = piece25.style.cy - 100;
+        } else if (piece28.style.cx == piece4.style.cx) {
+            piece28.style.cy = piece4.style.cy - 100;
+        } else if (piece28.style.cx == piece24.style.cx) {
+            piece28.style.cy = piece24.style.cy - 100;
+        } else if (piece28.style.cx == piece3.style.cx) {
+            piece28.style.cy = piece3.style.cy - 100;
+        } else if (piece28.style.cx == piece23.style.cx) {
+            piece28.style.cy = piece23.style.cy - 100;
+        } else if (piece28.style.cx == piece2.style.cx) {
+            piece28.style.cy = piece2.style.cy - 100;
+        } else if (piece28.style.cx == piece22.style.cx) {
+            piece28.style.cy = piece22.style.cy - 100;
+        } else if (piece28.style.cx == piece1.style.cx) {
+            piece28.style.cy = piece1.style.cy - 100;
+        } else {
+            piece28.style.cy = 550;
+        }
+    }
+
+    // Piece 7 Checking for Collision
+    if (piece27.style.cy > 25) {
+        if (piece7.style.cx == piece27.style.cx) {
+            piece7.style.cy = piece27.style.cy - 100;
+        } else if (piece7.style.cx == piece6.style.cx) {
+            piece7.style.cy = piece6.style.cy - 100
+        } else if (piece7.style.cx == piece26.style.cx) {
+            piece7.style.cy = piece26.style.cy - 100;
+        } else if (piece7.style.cx == piece5.style.cx) {
+            piece7.style.cy = piece5.style.cy - 100;
+        } else if (piece7.style.cx == piece25.style.cx) {
+            piece7.style.cy = piece25.style.cy - 100;
+        } else if (piece7.style.cx == piece4.style.cx) {
+            piece7.style.cy = piece4.style.cy - 100;
+        } else if (piece7.style.cx == piece24.style.cx) {
+            piece7.style.cy = piece24.style.cy - 100;
+        } else if (piece7.style.cx == piece3.style.cx) {
+            piece7.style.cy = piece3.style.cy - 100;
+        } else if (piece7.style.cx == piece23.style.cx) {
+            piece7.style.cy = piece23.style.cy - 100;
+        } else if (piece7.style.cx == piece2.style.cx) {
+            piece7.style.cy = piece2.style.cy - 100;
+        } else if (piece7.style.cx == piece22.style.cx) {
+            piece7.style.cy = piece22.style.cy - 100;
+        } else if (piece7.style.cx == piece1.style.cx) {
+            piece7.style.cy = piece1.style.cy - 100;
+        } else {
+            piece7.style.cy = 550;
+        }
+    }
+
+    // Piece 27 Checking for Collision
+    if (piece6.style.cy > 25) {
+        if (piece27.style.cx == piece6.style.cx) {
+            piece27.style.cy = piece6.style.cy - 100
+        } else if (piece27.style.cx == piece26.style.cx) {
+            piece27.style.cy = piece26.style.cy - 100;
+        } else if (piece27.style.cx == piece5.style.cx) {
+            piece27.style.cy = piece5.style.cy - 100;
+        } else if (piece27.style.cx == piece25.style.cx) {
+            piece27.style.cy = piece25.style.cy - 100;
+        } else if (piece27.style.cx == piece4.style.cx) {
+            piece27.style.cy = piece4.style.cy - 100;
+        } else if (piece27.style.cx == piece24.style.cx) {
+            piece27.style.cy = piece24.style.cy - 100;
+        } else if (piece27.style.cx == piece3.style.cx) {
+            piece27.style.cy = piece3.style.cy - 100;
+        } else if (piece27.style.cx == piece23.style.cx) {
+            piece27.style.cy = piece23.style.cy - 100;
+        } else if (piece27.style.cx == piece2.style.cx) {
+            piece27.style.cy = piece2.style.cy - 100;
+        } else if (piece27.style.cx == piece22.style.cx) {
+            piece27.style.cy = piece22.style.cy - 100;
+        } else if (piece27.style.cx == piece1.style.cx) {
+            piece27.style.cy = piece1.style.cy - 100;
+        } else {
+            piece27.style.cy = 550;
+        }
+    }
+
+    // Piece 6 Checking for Collision
+    if (piece26.style.cy > 25) {
+        if (piece6.style.cx == piece26.style.cx) {
+            piece6.style.cy = piece26.style.cy - 100;
+        } else if (piece6.style.cx == piece5.style.cx) {
+            piece6.style.cy = piece5.style.cy - 100;
+        } else if (piece6.style.cx == piece25.style.cx) {
+            piece6.style.cy = piece25.style.cy - 100;
+        } else if (piece6.style.cx == piece4.style.cx) {
+            piece6.style.cy = piece4.style.cy - 100;
+        } else if (piece6.style.cx == piece24.style.cx) {
+            piece6.style.cy = piece24.style.cy - 100;
+        } else if (piece6.style.cx == piece3.style.cx) {
+            piece6.style.cy = piece3.style.cy - 100;
+        } else if (piece6.style.cx == piece23.style.cx) {
+            piece6.style.cy = piece23.style.cy - 100;
+        } else if (piece6.style.cx == piece2.style.cx) {
+            piece6.style.cy = piece2.style.cy - 100;
+        } else if (piece6.style.cx == piece22.style.cx) {
+            piece6.style.cy = piece22.style.cy - 100;
+        } else if (piece6.style.cx == piece1.style.cx) {
+            piece6.style.cy = piece1.style.cy - 100;
+        } else {
+            piece6.style.cy = 550;
+        }
+    }
+
+    // Piece 26 Checking for Collision
+    if (piece5.style.cy > 25) { 
+        if (piece26.style.cx == piece5.style.cx) {
+            piece26.style.cy = piece5.style.cy - 100;
+        } else if (piece26.style.cx == piece25.style.cx) {
+            piece26.style.cy = piece25.style.cy - 100;
+        } else if (piece26.style.cx == piece4.style.cx) {
+            piece26.style.cy = piece4.style.cy - 100;
+        } else if (piece26.style.cx == piece24.style.cx) {
+            piece26.style.cy = piece24.style.cy - 100;
+        } else if (piece26.style.cx == piece3.style.cx) {
+            piece26.style.cy = piece3.style.cy - 100;
+        } else if (piece26.style.cx == piece23.style.cx) {
+            piece26.style.cy = piece23.style.cy - 100;
+        } else if (piece26.style.cx == piece2.style.cx) {
+            piece26.style.cy = piece2.style.cy - 100;
+        } else if (piece26.style.cx == piece22.style.cx) {
+            piece26.style.cy = piece22.style.cy - 100;
+        } else if (piece26.style.cx == piece1.style.cx) {
+            piece26.style.cy = piece1.style.cy - 100;
+        } else {
+            piece26.style.cy = 550;
+        }
+    }
+
+    // Piece 5 Checking for Collision
+    if (piece25.style.cy > 25) {
+        if (piece5.style.cx == piece25.style.cx) {
+            piece5.style.cy = piece25.style.cy - 100;
+        } else if (piece5.style.cx == piece4.style.cx) {
+            piece5.style.cy = piece4.style.cy - 100;
+        } else if (piece5.style.cx == piece24.style.cx) {
+            piece5.style.cy = piece24.style.cy - 100;
+        } else if (piece5.style.cx == piece3.style.cx) {
+            piece5.style.cy = piece3.style.cy - 100;
+        } else if (piece5.style.cx == piece23.style.cx) {
+            piece5.style.cy = piece23.style.cy - 100;
+        } else if (piece5.style.cx == piece2.style.cx) {
+            piece5.style.cy = piece2.style.cy - 100;
+        } else if (piece5.style.cx == piece22.style.cx) {
+            piece5.style.cy = piece22.style.cy - 100;
+        } else if (piece5.style.cx == piece1.style.cx) {
+            piece5.style.cy = piece1.style.cy - 100;
+        } else {
+            piece5.style.cy = 550;
+        }
+    }
+
+    // Piece 25 Checking for Collsion //
+    if (piece4.style.cy > 25) {
+        if (piece25.style.cx == piece4.style.cx) {
+            piece25.style.cy = piece4.style.cy - 100;
+        } else if (piece25.style.cx == piece24.style.cx) {
+            piece25.style.cy = piece24.style.cy - 100;
+        } else if (piece25.style.cx == piece3.style.cx) {
+            piece25.style.cy = piece3.style.cy - 100;
+        } else if (piece25.style.cx == piece23.style.cx) {
+            piece25.style.cy = piece23.style.cy - 100;
+        } else if (piece25.style.cx == piece2.style.cx) {
+            piece25.style.cy = piece2.style.cy - 100;
+        } else if (piece25.style.cx == piece22.style.cx) {
+            piece25.style.cy = piece22.style.cy - 100;
+        } else if (piece25.style.cx == piece1.style.cx) {
+            piece25.style.cy = piece1.style.cy - 100;
+        } else {
+            piece25.style.cy = 550;
+        }
+    }
+
+    // Piece 4 Checking for Collision //
+    if (piece24.style.cy > 25) {
+        if (piece4.style.cx == piece24.style.cx) {
+            piece4.style.cy = piece24.style.cy - 100;
+        } else if (piece4.style.cx == piece3.style.cx) {
+            piece4.style.cy = piece3.style.cy - 100;
+        } else if (piece4.style.cx == piece23.style.cx) {
+            piece4.style.cy = piece23.style.cy - 100;
+        } else if (piece4.style.cx == piece2.style.cx) {
+            piece4.style.cy = piece2.style.cy - 100;
+        } else if (piece4.style.cx == piece22.style.cx) {
+            piece4.style.cy = piece22.style.cy - 100;
+        } else if (piece4.style.cx == piece1.style.cx) {
+            piece4.style.cy = piece1.style.cy - 100;
+        } else {
+            piece4.style.cy = 550;
+        }
+    }
+    
+
+    // Piece 24 Checking for Collision
+    if (piece3.style.cy > 25) {
+        if (piece24.style.cx == piece3.style.cx) {
+            piece24.style.cy = piece3.style.cy - 100;
+        } else if (piece24.style.cx == piece23.style.cx) {
+            piece24.style.cy = piece23.style.cy - 100;
+        } else if (piece24 == piece2.style.cx) {
+            piece24.style.cy = piece2.style.cy - 100;
+        } else if (piece24 == piece22.style.cx) {
+            piece24.style.cy = piece22.style.cy - 100;
+        } else if (piece24.style.cx == piece1.style.cx) {
+            piece24.style.cy = piece1.style.cy - 100;
+        } else {
+            piece24.style.cy = 550;
+        }
+    }
+    
+
+    // Piece 3 Checking for Collision
+    if (piece23.style.cy > 25) {
+        if (piece3.style.cx == piece2.style.cx) {
+            piece3.style.cy = piece2.style.cy - 100;
+        } else if (piece3.style.cx == piece1.style.cx) {
+            piece3.style.cy = piece1.style.cy - 100;
+        } else if (piece3.style.cx == piece22.style.cx){
+            piece3.style.cy = piece22.style.cy - 100;
+        } else if (piece3.style.cx == piece23.style.cx) {
+            piece3.style.cy = piece23.style.cy - 100;
+        } else {
+        piece3.style.cy = 550;
+        }
+    }   
+    
     // Piece 23 Checking for Collision //
     if (piece2.style.cy > 25) {
-        if (piece23.style.cx == piece2.style.cx || piece23.style.cx == piece1.style.cx || piece23.style.cx == piece22.style.cx) {
+        if (piece23.style.cx == piece2.style.cx) {
             piece23.style.cy = piece2.style.cy - 100;
-        } else {
+        } else if (piece23.style.cx == piece1.style.cx) {
+            piece23.style.cy = piece1.style.cy - 100;
+        } else if (piece23.style.cx == piece22.style.cx){
+            piece23.style.cy = piece22.style.cy - 100;
+        }else {
         piece23.style.cy = 550;
         }
     }    
 
     // Piece 2 Checking for Collision //
     if (piece22.style.cy > 25) {
-        if (piece2.style.cx == piece22.style.cx || piece2.style.cx == piece1.style.cx) {
+        if (piece2.style.cx == piece22.style.cx) {
             piece2.style.cy = piece22.style.cy - 100;
+        } else if(piece2.style.cx == piece1.style.cx) {
+            piece2.style.cy = piece1.style.cy - 100;
         } else {
         piece2.style.cy = 550;
         }
-    }
+    } 
 
     // Piece 22 Checking for Collision //
     if (piece1.style.cy > 25) {
@@ -200,6 +1056,9 @@ function dropPiece() {
     // Piece 1 //
     piece1.style.cy = 550;
 
+    console.log(piece3.style.cy)
+
+    console.log(piece23.style.cy)
     console.log("click")
     //board.removeEventListener("mousemove" , setMouseCord)
 
